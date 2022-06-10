@@ -1,0 +1,44 @@
+{
+ "properties": {
+  "displayName": "FCI-Deploy-Governance-Sub_TEST",
+  "policyType": "Custom",
+  "description": "Contains Federated-Core-Initiative to Deploy Governance policies",
+  "metadata": {
+   "category": "Federated-Core-Policies",
+   "createdBy": "ba1c0023-3d8c-4a52-a606-662618382297",
+   "createdOn": "2022-06-09T13:03:04.4076373Z",
+   "updatedBy": "78635b2e-1bc2-4109-8c5c-ca49474d18a6",
+   "updatedOn": "2022-06-10T09:21:11.4126825Z",
+   "parameterScopes": {
+    "resourceGroupLocation": "/providers/Microsoft.Management/managementGroups/GLOBAL_TEST",
+    "eventHubDetails": "/subscriptions/ec058181-b853-4412-8120-a9da70c98fac/resourcegroups/rg-logmgmt-we1-prd"
+   }
+  },
+  "parameters": {},
+  "policyDefinitions": [
+   {
+    "policyDefinitionReferenceId": "157248442652406721",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/cdfcce10-4578-4ecd-9703-530938e4abcb",
+    "parameters": {
+     "resourceGroupName": {
+      "value": "rg-defender-conf-prd"
+     },
+     "resourceGroupLocation": {
+      "value": "west europe"
+     },
+     "createResourceGroup": {
+      "value": true
+     },
+     "eventHubDetails": {
+      "value": "/subscriptions/ec058181-b853-4412-8120-a9da70c98fac/resourceGroups/rg-logmgmt-we1-prd/providers/Microsoft.EventHub/namespaces/eventhub-logmgmt-we1-prd/eventhubs/evhub-logmgmt-az-defender-we1-prd/authorizationrules/defenderwrite"
+     }
+    },
+    "groupNames": []
+   }
+  ],
+  "policyDefinitionGroups": []
+ },
+ "id": "/providers/Microsoft.Management/managementGroups/GLOBAL_TEST/providers/Microsoft.Authorization/policySetDefinitions/FCI-Deploy-GOV-Sub_TEST",
+ "type": "Microsoft.Authorization/policySetDefinitions",
+ "name": "FCI-Deploy-GOV-Sub_TEST"
+}

@@ -1,0 +1,32 @@
+{
+ "sku": {
+  "name": "A0",
+  "tier": "Free"
+ },
+ "identity": {
+  "principalId": "9da08a4a-c8d9-4a68-875f-60082c3d4499",
+  "tenantId": "e6cbec2f-2f23-43ca-82c4-51a7c9b71e7a",
+  "type": "SystemAssigned"
+ },
+ "properties": {
+  "displayName": "FCA-Deploy-Governance_Subscription-TEST",
+  "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/GLOBAL_TEST/providers/Microsoft.Authorization/policySetDefinitions/FCI-Deploy-GOV-Sub_TEST",
+  "scope": "/providers/Microsoft.Management/managementGroups/GLOBAL_TEST",
+  "notScopes": [
+   "/providers/Microsoft.Management/managementGroups/GLOBAL_TEST_EX"
+  ],
+  "description": "Policy Assignment ",
+  "metadata": {
+   "category": "Federated-Core-Policies",
+   "createdBy": "ba1c0023-3d8c-4a52-a606-662618382297",
+   "createdOn": "2022-06-09T13:06:13.8766011Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "enforcementMode": "Default"
+ },
+ "id": "/providers/Microsoft.Management/managementGroups/GLOBAL_TEST/providers/Microsoft.Authorization/policyAssignments/FCA-Deploy-Tags-Sub-TEST",
+ "type": "Microsoft.Authorization/policyAssignments",
+ "name": "FCA-Deploy-Tags-Sub-TEST",
+ "location": "westeurope"
+}

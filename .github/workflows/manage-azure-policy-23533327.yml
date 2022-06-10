@@ -1,0 +1,32 @@
+name: manage-azure-policy-23533327
+on:
+  workflow_dispatch:
+    inputs:
+      remarks:
+        description: 'Reason for triggering the workflow run'
+        required: false
+        default: 'Updating Azure Policies'
+
+
+## Uncomment the following if you wish to automatically trigger workflow run with every commit
+#
+#  push:
+#    paths:
+#      - 'initiatives/FCI-Deploy-Governance-Sub_TEST_FCI-Deploy-GOV-Sub_TEST/**'
+#      - .github/workflows/manage-azure-policy-23533327.yml
+jobs:
+  apply-azure-policy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Login to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZURE_CREDENTIALS_23533327}}
+        allow-no-subscriptions: true
+    - name: Create or Update Azure Policies
+      uses: azure/manage-azure-policy@v0
+      with:
+        paths: |
+          initiatives/FCI-Deploy-Governance-Sub_TEST_FCI-Deploy-GOV-Sub_TEST/**
